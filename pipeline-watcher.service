@@ -1,0 +1,13 @@
+[Unit]
+Description=Pipeline Multimodale Automatica per Backup Watcher
+After=network.target
+
+[Service]
+Type=simple
+User=rust
+WorkingDirectory=%h/Scrivania/Hub/lavoro-tech/pipeline-multimodale-automatica-per-backup
+ExecStart=%h/Scrivania/Hub/lavoro-tech/pipeline-multimodale-automatica-per-backup/scripts/watcher.py
+Restart=on-failure
+
+[Install]
+WantedBy=multi-user.target
